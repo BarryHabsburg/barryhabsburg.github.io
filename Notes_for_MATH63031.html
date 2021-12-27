@@ -1,0 +1,268 @@
+<div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+        <div class="text_cell_render border-box-sizing rendered_html">
+            <h1 id="Notes-for-MATH-6303:-Analysis-(Fall-2021)">Notes for MATH 6303: Analysis (Fall 2021)<a
+                    class="anchor-link" href="#Notes-for-MATH-6303:-Analysis-(Fall-2021)">&#182;</a></h1>
+            <h1 id="by-Barry-Daemi">by Barry Daemi<a class="anchor-link" href="#by-Barry-Daemi">&#182;</a></h1>
+            <h1 id="Last-Updated:-September-6,-2021">Last Updated: September 6, 2021<a class="anchor-link"
+                    href="#Last-Updated:-September-6,-2021">&#182;</a></h1>$$\newcommand{\C}{\mathbb{C}}
+            \newcommand{\R}{\mathbb{R}}
+            \newcommand{\Z}{\mathbb{Z}}
+            \newcommand{\Q}{\mathbb{Q}}
+            \newcommand{\F}{\mathbb{F}}$$<h2 id="Chapter-1:-The-Real-Number-System">Chapter 1: The Real Number System<a
+                    class="anchor-link" href="#Chapter-1:-The-Real-Number-System">&#182;</a></h2>
+            <h3 id="1.1-Axiomx-for-a-Field">1.1 Axiomx for a Field<a class="anchor-link"
+                    href="#1.1-Axiomx-for-a-Field">&#182;</a></h3>
+            <p>(Add commentary here for FIELD)</p>
+            <p><strong>A-1. Closure property.</strong> If $a$ and $b$ are numbers, there is one and only one number,
+                denoted $a+b$, called their <strong>sum</strong>.<br />
+                <strong>A-2. Commutative law.</strong> For any two numbers $a$ and $b$, the equality
+                $$b+a=a+b$$
+                holds.<br />
+                <strong>A-3. Associative law.</strong> For all numbers $a$, $b$, and $c$, the equality
+                $$(a+b)+c=a+(b+c)$$
+                holds.<br />
+                <strong>A-4. Existence of a zero.</strong> There is one and only one number zero, called
+                <strong>zero</strong>, such that $a+0=a$ for any number $a$.
+                (Add commentary)<br />
+                <strong>A-5. Existence of a negative.</strong> If $a$ is any number, there is one and only one number
+                $x$ such that $a+x=0$. This number is called the <strong>negative of</strong> $a$ and is denoted by
+                $-a$.
+            </p>
+            <p>(Add commentary)</p>
+            <p><strong>Theorem 1.1.</strong> If $a$ and $b$ are any numbers, then there is one and only one number $x$
+                such that $a+x=b$. This number $x$ is given by $x=b+(-a)$.<br />
+                <strong>PROOF</strong>. We must establish two results (i) that $b+(-a)$ satisfies the equation $a+x=b$
+                and (ii) that no other number satisfies this equation. To prove (i), suppose that $x=b+(-a)$. Then,
+                using Axioms A-2 through A-4 we see that $a+x=a+[b+(-a)]=a+[(-a)+b]=[a+(-a)]+b=0+b=b$.
+                Therefore (i) holds. To prove (ii), suppose that $x$ is some number such that $a+x=b$. Adding $(-a)$ to
+                both sides of this equation, we find that
+                $$(a+x)+(-a)=b+(-a).$$
+                Now,
+                $$(a+x)+(-a)=a+[x+(-a)]=a+[(-a)+x]=[a+(-a)]+x=0+x=x.$$
+                We conclude that $x=b+(-a)$, and the uniqueness of the solution is established. $\square$
+            </p>
+            <p><em>Notation</em>. The number $b+(-a)$ is denoted by $b-a$.</p>
+            <p>(Add commentary)</p>
+            <p><strong>Lemma 1.1.</strong> If $a$, $b$. and $c$ are any numbers, then
+                $$a+b+c=a+c+b=b+a+c=b+c+a=c+a+b=c+b+a/$$<br />
+                <strong>PROOF.</strong>
+            </p>
+            <p><strong>Lemma 1.2.</strong> If $a$, $b$, $c$, and $d$ are numbers, then
+                $$(a+c)+(b+d)=(a+b)+(c+d).$$<br />
+                PROOF. Using Lemma 1.1 and the axioms, we have
+                $$(a+c)+(b+d)=[(a+c)+b]+d=(a+c+b)+d$$
+                $$=(a+b+c)+d=[(a+b)+c]+d=(a+b)+(c+d). \square$$</p>
+            <p><strong>Theorem 1.2</strong>
+                (i) If $a$ is a number, then $-(-a)=a.$
+                (ii) If $a$ and $b$ are numbers, then
+                $$-(a+b)=(-a)+(-b).$$
+                <strong>PROOF</strong>. (i) From the definition of negative, we have
+                $$(-a)+[-(-a)]=0, (-a)+a=a+(-a)=0$$
+                Axiom A-5 states that the negative of (-a) is unique. Therefore, $a=-(-a)$. To establish (ii), we know
+                from the definition of negative that
+                $$(a+b)=[-(a+b)]=0.$$
+                Furthermore, using Lemma 1.2, we have
+                $$(a+b)+[(-a)+(-b)]=[a+(-a)]+[b+(-b)]=0+0=0.$$
+                The result follows from the "only one" part of Axiom A-5. $\square$
+            </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Axioms of Multiplication and Division</em></p>
+            <p><strong>M-1. Closure property.</strong> If $a$ and $b$ are numbers, there is one and only one number,
+                denoted by $ab$ (or $a*b$), called their <strong>product</strong>.<br />
+                <strong>M-2. Commutative law.</strong> For every two number $a$ and $b$, the equality
+                $$ba=ab$$
+                holds.<br />
+                <strong>M-3. Associative law.</strong> For all numbers $a$, $b$, and $c$, the equality
+                $$(ab)c=a(bc)$$
+                holds.<br />
+                <strong>M-4. Existence of a unit.</strong> There is one and only one number $u$, different from zero,
+                such that $au=a$ for every every number $a$. This number $u$ is called the <strong>unit</strong> and (as
+                is customary) is denoted by 1.<br />
+                <strong>M-5. Existence of a reciprocal.</strong> For each number a different from zero there is one and
+                only one number $x$ such that $ax=1$. This number $x$ is called the <strong>reciprocal</strong> of $a$
+                (or the inverse of $a$) and is denoted by $a^{-1}$ (or $1/a$).
+            </p>
+            <p><strong>Remarks.</strong></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Special Axiom</em></p>
+            <p><strong>D.Distributive law.</strong> For all numbers $a$, $b$, and $c$ the equality
+                $$a(b+c)=ab+ac$$
+                holds.</p>
+            <p><strong>Remarks.</strong></p>
+            <p><strong>Theorem 1.3.</strong> If $a$ is any number, then $a*0=0$.<br />
+                <strong>PROOF.</strong> Let $b$ be any number. Then $b+0=b$, and therefore $a(b+0)=ab$. From the
+                distributive law (Axiom D), we find that
+                $$(ab)+(a*0)=(ab),$$
+                so that $a*0=0$ by Axiom A-4. $\square$
+            </p>
+            <p><strong>Theorem 1.4.</strong> If $a$ and $b$ are numbers and $a\ne0$, then there is one and only one
+                number $x$ such that $a*x=b$. The number $x$ is given by $x=ba^{-1}$.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Notation.</em> The expression "if and only if," a technical one used
+                frequently in mathematics, requires some explanation. Suppose $A$ and $B$ stand for propositions which
+                may be true or false.</p>
+            <p>To say that $A$ is true if $B$ is true means that the truth of $B$ implies the truth of $A$. The
+                statement $A$ is</p>
+            <p>Note: Make a footnote here</p>
+            <p><strong>Theorem 1.5.</strong>
+                (i) We have $ab=0$ if and only if $a=0$ or $b=0$ or both.<br />
+                (ii) We have $a\ne0$ and $b\ne0$ if and only if $ab\ne0$.<br />
+                <strong>PROOF.</strong> We must prove two statements in each of Parts (i) and (ii). To prove (i),
+                observe that if $a=0$ or $b=0$ or both, then it follows from Theorem 1.3 that $ab=0$. Going the other
+                way in (i), suppose that $ab=0$. Then there are two cases: either $a=0$ or $a\ne0$. If $a=0$, the result
+                follows. If $a\ne0$, then we see that
+                $$b=1*b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}*0=0.$$
+                Hence $b=0$ and (i) is established. To prove (ii), first suppose $a\ne0$ and $b\ne0$. Then $ab\ne0$,
+                because $a\ne0$ and $b\ne0$ is the negation of the statement "$a=0$ or $b=0$ or both." Thus (i) applies.
+                For the second part of (ii), suppose $ab\ne0$. Then $a\ne0$ and $b\ne0$ for, if one of them were zero,
+                Theorem 1.3 would apply to give $ab=0$. $\square$
+            </p>
+            <p><strong>Lemma 1.3.</strong> If, $a$, $b$, and $c$ are numbers, then
+                $$abc=acb=bac=bca=cab=cba.$$
+                <strong>Lemma 1.4</strong> If $a$, $b$, $c$, and $d$ are numbers, then
+                $$(ac)*(bd)=(ab)*(cd)$$
+                <strong>Theorem 1.6.</strong>
+                (i) If $a\ne0$. then $a^{-1}=0$ and $[(a^{-1})^{-1}]=a$.<br />
+                (ii) If $a\ne0$ and $b\ne0$, then $(a*b)^{-1}=(a^{-1})*(b^{-1})$.<br />
+                <strong>PROOF.</strong>
+                (add soon)
+            </p>
+            <p><strong>Theorem 1.7.</strong> If $a$ and $b$ are any numbers, then
+                (i)$a*(-b)=-(a*b)$.<br />
+                (ii)$(-a)*b=-(a*b)$<br />
+                (iii)$(-a)*(-b)=a*b$<br />
+                <strong>PROOF.</strong> (i) Since $b+(-b)=0$, it follows from the distributive law that
+                $$a[b+(-b)]=a*b+a*(-b)=0.$$
+                Also, the negative of $a*b$ has the property that $a*b+[-(a*b)]=0$. Hence we see from Axiom A-5 that
+                $a*(-b)=-(a*b)$. Part (ii) follows from Part (i) by interchanging $a$ and $b$. The proof of (iii) is
+                left to the reader. $\square$
+            </p>
+            <p><strong>Corollary.</strong> The equality $(-1)*a=-a$ holds.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Notation.</em> We introduce the following symbols for $a*b^{-1}$:
+                $$a*b^{-1}=\frac{a}{b}=a/b=a\div b.$$
+                These symbols, representing an indicated division, are called <strong>fractions</strong>. The
+                <em>numerator</em> and <em>denominator</em> of a fraction are defined as usual. A fraction with
+                <em>denominator</em> zero has no meaning.<br />
+                <strong>Theorem 1.8</strong><br />
+                (i) For every number $a$, the equality $a/1=a$ holds.<br />
+                (ii) If $a\ne0$, then $a/a=1$.<br />
+                <strong>PROOF.</strong> (i) We have $a/1=(a*1^{-1})=(a*1^{-1})*1=a(1^{-1}*1)=a*1=a$. (ii) If $a\ne0$.
+                then $a/a=a*a^{-1}=1$, by definition. $\square$
+            </p>
+            <p><strong>Theorem 1.9</strong> If $b\ne0$ and $b\ne0$, then $b*d\ne0$ and
+                $$(\frac{a}{b})*(\frac{c}{d})=\frac{a*c}{b*d}.$$
+                <strong>PROOF.</strong> That $b*d\ne0$ follows from Theorem 1.5. Using the notation for fractions, Lemma
+                1.4, and Theorem 1.6(ii), we find
+                $$(\frac{a}{b})*(\frac{c}{d})=(a*b^{-1})*(cd^{-1})=(a*c)*(b^{-1}d^{-1})=(a*c)(bd)^{-1}=\frac{a*c}{b*d}.$$
+                $\square$
+            </p>
+            <p><strong>Theorem 1.10</strong><br />
+                (i) If $b\ne0$ and $c\ne0$, then
+                $$\frac{a}{b}=\frac{a*c}{b*c}.$$
+                (ii) If $c\ne0$, then<br />
+                $$\frac{a}{c}+\frac{b}{c}=\frac{(a+b)}{c}.$$
+                (iii) If $b\ne0$, then $-b=0$ and
+                $$\frac{-a}{b}=\frac{a}{-b}=-(\frac{a}{b}).$$
+                (iv) If $b\ne0$, $c\ne0$, and $d\ne0$, then $(c/d)\ne0$ and
+                $$\frac{(a/b)}{(c/d)}=\frac{a*d}{b*c}=(\frac{a}{b})*(\frac{d}{c}).$$
+                (v) If $b\ne0$ and $d\ne0$, then
+                $$\frac{a}{b}+\frac{c}{d}=\frac{ad+bc}{bd}.$$</p>
+            <h3 id="1.2-Natural-Numbers-and-Sequences">1.2 Natural Numbers and Sequences<a class="anchor-link"
+                    href="#1.2-Natural-Numbers-and-Sequences">&#182;</a></h3>
+            <p>(Add commentary)</p>
+            <p><strong>Definitions.</strong> The set (or collection) of all real numbers is denoted by $\R^{1}$. The set
+                of ordered pairs of real numbers is denoted by $\R^{2}$, the set of ordered triples by $\R^{3}$ and so
+                on.<br /></p>
+            <ul>
+                <li><strong>Relation:</strong> A <strong>relation</strong> <em>from</em> $\R^{1}$ <em>to</em> $\R^{1}$
+                    is a set of ordered pairs of real numbers, that is, a relation from $\R^{1}$ to $\R^{1}$ is a set in
+                    $\R^{2}$.<br /></li>
+                <li><strong>Domain:</strong> The <strong>domain</strong> of this relation is the set in $\R^{1}$
+                    consisting of all the first elements in the ordered pairs.<br /></li>
+                <li><strong>Range:</strong> The <strong>range</strong> of the relation is the set of all the second
+                    elements in the ordered pairs. Observe that the range is also a set in $\R^{1}$.<br /></li>
+                <li><strong>Function:</strong> A function $f$ <em>from</em> $\R^{1}$ into $\R^{1}$ is a relation in
+                    which no two ordered pairs have the same first element. We use the notation $f: \R^{1} \rightarrow
+                    \R^{1}$ for such a function.<ul>
+                        <li><strong>Mapping:</strong> The word <strong>mapping</strong> is a synonym for function. If
+                            $D$ is the domain of $f$ and $S$ is its range, we shall sometimes use the notation $f: D
+                            \rightarrow S$. A function is a relation (set of $\R^{2}$) such that for each element $x$ in
+                            the domain there is precisely one element $y$ in the range such that the pair $(x,y)$ is one
+                            of the ordered pairs which constitute the function. Occassionally, a function will be
+                            indicated by writing $f: x \rightarrow y$. Also, for a given function $f$, the unique number
+                            in the range corresponding to an element $x$ in the domain is written $f(x)$. The symbol $x
+                            \rightarrow f(x)$ is used for this relationship. We assume that the reader is familiar with
+                            functionL notation.</li>
+                    </ul>
+                </li>
+                <li><strong>Sequence:</strong> A <strong>sequence</strong> is a function which has as its domain some or
+                    all of the natural numbers. If the domain consists of finite number of positive integers, we say the
+                    sequence is <strong>finite</strong>. Otherwise, the sequence is called <strong>infinite</strong>.
+                </li>
+            </ul>
+            <p><strong>Proposition 1.1</strong> (Sum). If $a_1,a_2,...,a_n$ is given sequence, then there is a unique
+                finite sequence $b_1,b_2,...,b_n$ with the properties:
+                $$b_1=a_1$$
+                and, in general,
+                $$b_{i+1}=b_i+a_{i+1} \text{ for } i=1,2,...,n-1 \text{ if } n &gt; 1.$$
+                <strong>Proposition 1.2</strong> (Product) If $a_1,...,a_n$ is given sequence, then there is a unique
+                finite sequence $c_1,...,c_n$ with the properties:
+                $$c_1=a_1$$
+                and, in general,
+                $$c_{i+1}=c_i*a_{i+1} \text{ for } i=1,2,...,n-1 \text{ if } n &gt; 1.$$
+                <strong>Definitions.</strong> For all integers $n \geqslant 1$, the <strong>sum</strong> and
+                <strong>product</strong> of the numbers $a_1,a_2,...,a_n$ are defined by
+                $$a_1+a_2+ \cdots +a_n \equiv b_n \text{ and } a_1*a_2* \cdots *a_n \equiv c_n$$
+                We use the notation
+                $$\sum_{i=1}^{n} a_i=a_1+a_2+ \cdots +a_n \text{ and } \prod_{i=1}^{n} a_i = a_1*a_2* \cdots *a_n.$$
+                <strong>Proposition 1.3.</strong> If $a_1,a_2,...,a_n,a_{n+1}$ is any sequence, then
+                $$\sum_{i=1}^{n+1} a_i = \left( \sum_{i=1}^{n} a_i \right)+a_{n+1} \text{ and } \prod_{i=1}^{n+1} a_i =
+                \left( \prod_{i=1}^{n} a_i \right)*a_n.$$
+                <strong>Proposition 1.4.</strong> If $a_1,a_2,...,a_m,a_{m+1},...,a_{m+n}$ is any sequence, then
+                $$\sum_{i=1}^{m+n} a_i = \sum_{i=1}^{m} a_i + \sum_{i=m+1}^{m+n} a_i$$
+                and
+                $$\prod_{i=1}^{m+n} a_i = \prod_{i=1}^{m} a_i + \prod_{i=m+1}^{m+n} a_i$$
+            </p>
+            <p><strong>Proposition 1.5.</strong> The sum of a finite sequence can be obtained by separating the given
+                sequence into several shorter sequences, adding the terms in each of these, and then adding the results.
+                A similar statement holds for products.<br />
+                <strong>Proposition 1.6.</strong> The sum of a given finite sequence is independent of the order of its
+                terms. The product of a funeute sequence is independent of thr order of its terms.<br />
+                <strong>Proposition 1.7.</strong> If $a$ is any number and $b_1,b_2,...,b_n$ is any sequence, then
+                $$a*(b_1+b_2+ \cdots + b_n)=(b_1+b_2+ \cdots + b_n)*a=ab_1+ab_2+ \cdots +ab_n.$$
+            </p>
+            <p><strong>Definitions.</strong> A real number is an integer if and only if it is either zero, a natural
+                number, or the negative of a natural number.</p>
+            <ul>
+                <li>A real number $r$ is said to be a <strong>rational</strong> if and only if there are integers $p$
+                    and $q$, with $q \ne 0$, such that $r=p/q$.</li>
+                <li>A real number which is not rational is called <strong>irrational</strong>.</li>
+            </ul>
+            <blockquote>
+                <p><strong>Definition 1.</strong> A <strong>field</strong> consists of a set of <em>k</em> and two
+                    binary operations "+" and "." destined on <em>k</em> for which the following conditions are
+                    satisfied:<br />
+                    (i) $(a+b)+c=a+(b+c)$ and $(a*b)*c=a(b*c)$ for all $a$,$b$,$c\in k$ (associativity).<br />
+                    (ii) $a+b=b+a$ and $a*b=b*a$ for all $a,b,c \in k$ (commutativity).<br />
+                    (iii) $a*(b+c)=a*b+a*c$ for all $a,b,c \in k$ (distributivity).<br />
+                    (iv) There are $0$,$1 \in k$ such that $a+0=a*1=a$ for all $a \in k$ (identities).<br />
+                    (v) Given $a \in k$, there is $b \in k$ such that $a+b=0$ (additive inverses).<br />
+                    (vi) Given $a \in k$, $a\ne0$, there is $c \in k$ such that $a*c=1$ (multiplicative inverses).</p>
+                <p><strong>Remarks:</strong> The fields most commonly used in the text are $\Q$, $\R$, and $\C$. In the
+                    exercises to $\S$1 of Chapter 1, we mention the field $\F_2$ which consists of the two elements 0
+                    and 1. Some more complicated fields are discussed in the text. For example, in $\S$3 of Chapter 1,
+                    we define the field $k(t_1,...,t_m)$ of rational functions in $t_1,...,t_m$ with coefficients in
+                    $k$. Also, in $\S$5 of Chapter 5, we introduce the field $k(V)$ of rational functions on an
+                    irreducible variety $V$.</p>
+                <p>From: (Cox et al., 2015, pg. 593)</p>
+            </blockquote>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cayley tables are used to describe the structure of finite groups by
+                arranging all the possible group's element into square tables with a single operator. In example for the
+                Cayley multiplaction table, the operator is the multipler, and the elements of the group are align
+                alongside the top and left boundaries of the table.<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To illustrate Cayley tables and the process of which is used to describe a
+                group's structure, we will consider a syetem with five elements $0$,$1$,$2$,$3$,$4$:</p>
+
+        </div>
+    </div>
+</div>
